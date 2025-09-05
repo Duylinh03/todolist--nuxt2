@@ -25,8 +25,8 @@ export default {
     addTodo(text) {
       this.$store.commit('todos/add', text)
     },
-    removeTodo(index) {
-      this.$store.commit('todos/remove', index)
+    removeTodo(id) {
+      this.$store.commit('todos/remove', id)
     },
     updateTodo(payload) {
       this.$store.commit('todos/update', payload)

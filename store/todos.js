@@ -4,12 +4,16 @@ export const state = () => ({
 
 export const mutations = {
   add(state, text) {
-    state.list.push(text)
+    const id = Date.now()
+    state.list.push({ id, text })
   },
-  remove(state, index) {
-    state.list.splice(index, 1)
+  remove(state, id) {
+    state.list = state.list.filter(item => item.id !== id)
   },
-  update(state, { index, newText }) {
-    state.list[index] = newText
+  update(state, { id, newText }) {
+    const item = state.list.find(item => item.id === id)
+    if (item) {
+      item.text = newText
+    }
   }
 }

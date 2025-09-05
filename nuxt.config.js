@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'todolist',
+    title: 'Todo của em',
     htmlAttrs: {
       lang: 'en',
     },
@@ -18,7 +18,7 @@ export default {
   css: ['ant-design-vue/dist/antd.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/antd-ui', '@/plugins/todo-persist.client.js'],
+  plugins: ['@/plugins/antd-ui'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
